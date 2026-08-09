@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Sign Up</title>
+        <style>
+
+            body {
+                font-family: Arial;
+            }
+
+            .signup-form {
+                width: 400px;
+            }
+
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            .form-group label {
+                margin-bottom: 5px;
+            }
+
+            .form-group input,
+            .form-group select {
+                padding: 8px;
+            }
+
+            .signup-button {
+                padding: 10px 20px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+        <header class="site-header">
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a href="projects.html">Projects</a>
+                <a href="articles.html">Articles</a>
+                <a href="contact.html">Contact</a>
+                <a href="signup.html">Sign Up</a>
+            </nav>
+
+        </header>
+
+
+        <main class="main-content">
+
+            <section class="signup-section">
+
+                <h1>Create Account</h1>
+
+                <p>Create your account using the form below.</p>
+
+                <form class="signup-form">
+
+                    <div class="form-group">
+
+                        <label for="first-name">First Name</label>
+
+                        <input
+                            type="text"
+                            id="first-name"
+                            name="first-name"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+
+                        <input
+                         type="text"
+                         id="last-name"
+                         name="last-name"
+                         required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="password"> Password</label>
+
+                        <input 
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                        >
+                    </div>
+                    <div class="form-group">
+
+                        <label for="confirm-password">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirm-password"
+                            name="confirm-password"
+                            required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="email">Email</label>
+
+                        <input 
+                        type="text"
+                        id="email"
+                        name="email"
+                        required
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="birth-date">
+                            Date of Birth
+                        </label>
+
+                        <input
+                            type="date"
+                            id="birth-date"
+                            name="birth-date"
+                        >
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <p>Account Type</p>
+
+                        <input
+                            type="radio"
+                            id="personal"
+                            name="account-type"
+                            value="personal"
+                        >
+
+                        <label for="personal">
+                            Personal
+                        </label>
+
+
+                        <input
+                            type="radio"
+                            id="business"
+                            name="account-type"
+                            value="business"
+                        >
+
+                        <label for="business">
+                            Business
+                        </label>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            required
+                        >
+
+                        <label for="terms">
+                            I agree to the Terms and Conditions
+                        </label>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label for="country">
+                            Country
+                        </label>
+
+                        <select
+                            id="country"
+                            name="country"
+                            required
+                        >
+
+                            <option value="">
+                                Select your country
+                            </option>
+
+                            <option value="germany">
+                                Germany
+                            </option>
+
+                            <option value="iran">
+                                Iran
+                            </option>
+
+                            <option value="canada">
+                                Canada
+                            </option>
+
+                        </select>
+
+                    </div>
+                    
+                    <button
+                        class="signup-button"
+                        type="submit"
+                    >
+                        Create Account
+                    </button>
+
+                </form>
+
+            </section>
+
+        </main>
+
+
+        <footer class="site-footer">
+            <p>© 2026 My Portfolio</p>
+        </footer>
+
+    </body>
+
+</html>
