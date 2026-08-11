@@ -1,12 +1,21 @@
+*{
+    box-sizing: border-box;
+}
 html{
     scroll-behavior: smooth;
     font-size:16px;
+}
+html:active-view-transition main {
+    animation: none;
 }
 body{
     margin:0;
     background-color: #cce8cc;
     font-family:Georgia, 'Times New Roman', Times, serif;
     line-height: 2.5rem;
+}
+main {
+    animation: fade-in 500ms ease-out;
 }
 header {
     position:sticky;
@@ -18,6 +27,7 @@ header {
     font-size: 2rem;
     text-align:right;
     padding:1.5rem;
+    width: 100vw;
 }
 .top-ribbon {
     display: flex;
@@ -40,9 +50,9 @@ header {
 }
 .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
-.projects{
+.home-page .projects{
     color:black;
     border:1.5px solid #1a5d4d;
     border-radius: 1rem;
@@ -52,23 +62,23 @@ header {
     transition : transform 250ms ease,
                 box-shadow 250ms ease;                 
 }
-.projects:hover {
+.home-page .projects:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgb(0 0 0 / 15%);
 }
-.projects h4{
+.home-page .projects h4{
     font-size:24px;
 }
-.projects div{
+.home-page .projects div{
     font-size: 18px;
 }
 .workexp{
-    background-color:#aed5ae;
+    background-color:#cce8cc;
     color:black;
     left:305px;
     padding: 2rem;
     flex:1;
-    border:1.5px solid #aed5ae;
+    border:1.5px solid #1a5d4d;
     border-radius: 1rem;
     margin:6px;
     font-size:1rem;
@@ -82,12 +92,16 @@ header {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgb(0 0 0 / 15%);
 }
-.osworks {
-    border:1px solid black;
+.oswork {
+    border-top:1px solid black;
+    margin-top:2rem;
 }
-.osworks a{
+.oswork a{
     color:#1a5d4d;
+}
+.oswork a:visited{
     text-decoration: none;
+    color: black;
 }
 .education {
     padding:2rem;
@@ -117,23 +131,86 @@ header {
 .contact a {
     color:#1a5d4d;
 }
-.products { 
+.projects-page .projects { 
     display:grid;
-    gap:24px;
+    gap:16px;
     justify-content: normal;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    margin-inline:auto;
 }
-.product {
-    border:1px solid black;
-    padding: 15px;
+.projects-page .project {
+    padding: 16px;
 }
-.product img{
-    max-width: 300px;
-    max-height: 150px;
+.projects-page .project img{
+    display: block;
+    width: 100%;
+    transition: transform 400ms ease;
+}
+.projects-page .project:hover img {
+    transform: scale(1.05);
 }
 
-@media(min-width: 768px) {
+.projects-controls {
+    display: none;
+}
+.button {
+    margin:16px;
+    color:#1a5d4d;
+    text-decoration: none;
+}
+.button span {
+    display: inline-block;
+    transition: transform 300ms ease;
+}
+.button:hover span{
+    transform: translateX(16px);
+}
+
+@media(max-width: 768px) {
     .container {
-        flex-direction: row;
+        flex-direction: column;
+    }
+    .projects-page .projects {
+        display: block;
+        border: 1px solid #1a5d4d;
+        border-radius: 1rem;
+        margin: 16px;
+        
+    }
+    .projects-page .project {
+        display: none;
+    }
+    .projects-page .project img {
+        display: block;
+        margin-inline: auto;
+    }
+    .project.active {
+        display: block;
+        padding: 16px;
+        margin: 32px;
+    }
+    .project.active img{ 
+        display: block;
+        margin-inline: auto;
+        max-width: 90vw;
+    }
+    .projects-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+    }
+    .projects-controls {
+        flex:1;
+    }
+    .projects-controls button{
+        background-color:transparent;
+        border: none;
+        font-size: 1rem;
+        cursor:pointer;
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: #1a5d4d;
+
     }
 }
 @view-transition {
@@ -160,4 +237,37 @@ header {
     opacity: 0;
     transform: translateY(10px);
   }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.exit-left {
+    animation: exit-left 300ms ease-in;
+    animation-direction: alternate;
+}
+@keyframes exit-left {
+    to {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+}
+.exit-right {
+    animation: exit-right 300ms ease-in;
+}
+@keyframes exit-right {
+    to {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+}
+.enter-left{
+    animation: exit-right 300ms ease-in reverse both;
+}
+.enter-right {
+    animation: exit-left 300ms ease-in reverse both;
 }

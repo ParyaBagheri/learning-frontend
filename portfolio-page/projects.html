@@ -3,8 +3,9 @@
     <head>
         <title>band store</title>
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
+    <body class="projects-page">
         <header class="top-ribbon">        
             <div>Projects</div>
             <nav class="navlinks">
@@ -14,23 +15,51 @@
             </nav>
         </header>
         <main>
-            <div class="products">
-                <div class="product">
-                    <img src="scrnsht.png">
-                    <h4>product1</h4>
-                    <p>price1</p>
-                </div>
-                <div class="product">
-                    <img src="scrnsht.png">
-                    <h4>product2</h4>
-                    <p>price3</p>
-                </div>
-                <div class="product">
-                    <h4>product3</h4>
-                    <p>price3</p>
-                </div>
+            <section class="project-showcase">
+                <div class="projects">
+                    <article class="project active">
+                        <img src="image.jpeg">
+                        <h4>project 1</h4>
+                        <p>details</p>
+                    </article>
 
-            </div>
+                    <article class="project">
+                        <img src="image.jpeg">
+                        <h4>project 2</h4>
+                        <p>details</p>
+                    </article>
+
+                    <article class="project">
+                        <img src="image.jpeg">
+                        <h4>project 3</h4>
+                        <p>details</p>
+                    </article>
+
+                    <article class="project">
+                        <img src="image.jpeg">
+                        <h4>project 4</h4>
+                        <p>details</p>
+                    </article>
+
+                    <article class="project">
+                        <img src="image.jpeg">
+                        <h4>project 5</h4>
+                        <p>details</p>
+                    </article>
+
+                    <div class="projects-controls">
+                        <button class="previous-project" type="button" aria-label="Show previous project"> ← previous </button>
+                        <p class="view-counter">
+                            <span class="current-project"> 1 </span>
+                            /
+                            <span class="total-projects"> 3 </span>
+                        </p>
+                        <button class="next-project" type="button" aria-label="Show next project"> next → </button>
+                    </div>
+
+                </div>
+            </section>
         </main>
+        <script src="projects.js"></script>
     </body>
 </html>
