@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+}
+
+/* Navbar */
+
+.site-header {
+    background-color: #1e293b;
+    padding: 20px 40px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #38bdf8;
+}
+
+/* Hero */
+
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 1s ease;
+}
+
+.main-title {
+    color: #0f172a;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.intro-text {
+    color: #64748b;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+/* About + Skills */
+
+.about-section,
+.skills-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Table */
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.skills-table th,
+.skills-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+}
+
+.skills-table th {
+    background-color: #2563eb;
+    color: white;
+}
+
+.skills-table tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* Contact + Signup */
+
+.contact-section,
+.signup-section {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="date"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: 2px solid #2563eb;
+}
+
+.submit-button,
+.signup-button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover,
+.signup-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+
+.site-footer {
+    margin-top: 60px;
+    padding: 25px;
+    background-color: #1e293b;
+    color: white;
+    text-align: center;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .main-title {
+        font-size: 34px;
+    }
+
+    .hero-section {
+        padding: 60px 20px;
+    }
+
+    .about-section,
+    .skills-section,
+    .contact-section,
+    .signup-section {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
