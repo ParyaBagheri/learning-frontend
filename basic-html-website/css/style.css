@@ -69,10 +69,11 @@ body {
     transform: translateY(-3px);
 }
 
-/* About + Skills */
+/* About + Skills  */
 
 .about-section,
-.skills-section {
+.skills-section,
+.javascript-section {
     max-width: 900px;
     margin: 40px auto;
     padding: 30px;
@@ -80,6 +81,30 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+#javascript-slills{
+    padding-left: 20px;
+    line-height: 2;
+}
+
+#toggle-skills-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+#toggle-skills-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+
+
+
 
 /* Table */
 
