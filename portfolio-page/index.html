@@ -16,9 +16,13 @@
         </header>
         <main>
             <div class="container">
+                <div class="card">
                 <section class="projects">
-                    <h4>Projects</h4>
-                    <ul>
+                    <h4>Projects
+                    <button class="drop-down" type="button"> ▾ </button>
+                    </h4>
+                    <div class="tab active">
+                    <ul class="projects-list">
                         <li>project 1</li>
                         <li>project 2</li>
                         <li>project 3</li>
@@ -29,9 +33,13 @@
                     <a class="button" href="projects.html">
                         View projects <span> → </span>
                     </a>
+                    </div>
                 </section>
+                </div>
+                <div class="card">
                 <section class="workexp" id="work-exp">
                     <h4>Work Experience</h4>
+                    <div class="tab">
                     <p>This is my work Experience</p>
                     <a target="_blank">Visit my profile</a>
                     <div class="oswork">
@@ -39,9 +47,13 @@
                         <p>These are my opensource works</p>
                         <a href="https://github.com/ParyaBagheri" target="_blank">Visit my GitHub profile</a>
                     </div>
+                    </div>
                 </section>
+                </div>
+                <div class="card">
                 <section class="education">
                     <h4>Education</h4>
+                    <div class="tab">
                     <p>details about my education</p>
                     <h5>courses I took:</h5>
                     <ul>
@@ -50,7 +62,9 @@
                         <li>Linear Algebra</li>
                         <li>Logic</li>
                     </ul>
+                    </div>
                 </section>
+                </div>
             </div>
             <section class="contact" id="contact">
                 <h3>contact</h3>
@@ -60,5 +74,6 @@
                 </p>
             </section>
         </main>
+        <script src="projects.js"></script>
     </body>
 </html>

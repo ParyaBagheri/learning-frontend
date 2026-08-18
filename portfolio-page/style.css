@@ -60,7 +60,7 @@ header {
     flex:1;
     margin:6px;
     transition : transform 250ms ease,
-                box-shadow 250ms ease;                 
+                box-shadow 250ms ease; 
 }
 .home-page .projects:hover {
     transform: translateY(-6px);
@@ -71,6 +71,19 @@ header {
 }
 .home-page .projects div{
     font-size: 18px;
+}
+.projects-list {
+    display: none;
+}
+.projects-list.open {
+    display: block;
+}
+.drop-down {
+    background-color: transparent;
+    border : none;
+    cursor: pointer;
+    font-size: 32px;
+    display: inline-block;
 }
 .workexp{
     background-color:#cce8cc;
@@ -212,6 +225,18 @@ header {
         color: #1a5d4d;
 
     }
+    .drop-down {
+        display: none;
+    }
+    .tab {
+        display: none;
+    }
+    .tab.active {
+        display: block;
+    }
+    .projects-list {
+        display: block;
+    }
 }
 @view-transition {
   navigation: auto;
@@ -271,3 +296,4 @@ header {
 .enter-right {
     animation: exit-left 300ms ease-in reverse both;
 }
+

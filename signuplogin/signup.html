@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Signup page</title>
+
+    <style>
+        body {
+            margin:200px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            overflow:scroll;
+        }
+        main{
+            align-items: center;
+        }
+        form {
+            color:crimson;
+            margin: 36px;
+            padding-bottom: 96px;
+            font-size: 24px;
+        }
+        form div{
+            margin: 16px;
+        }
+        input:focus {
+            width:300px;
+            height:32px;
+            border: 10px;
+            border-radius: 8px;
+            border-color: darkred;
+            color:darkred;
+            margin: 5px;
+        }
+        section {
+            margin-bottom: 40px;
+            color:brown;
+        }
+        header {
+            color:darkred;
+            width:300px;
+            font-size:large;
+            margin-bottom:16px;
+        }
+        button {
+            width: 100px;
+            height:36px;
+            margin:16px;
+            background-color:crimson;
+            border-radius:8px;
+            border-color:crimson;
+            color:white;
+            font-size:16px;
+            
+        }
+        #email.invalid {
+            background-color: crimson;
+            border-color: chocolate;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Signup page</h1>
+    </header>
+        <main>
+            <div>
+            <section>
+                <h2>Sign up</h2>
+                <p>Choose a username and a password</p>
+                <form>
+                    <div>
+                        <label>
+                            Your username
+                            <input type="text" placeholder="Enter Username">
+                        </label>
+                    </div>
+                    <div>
+                        <label id="password">
+                            Your password
+                            <input type="password" placeholder="Enter Password">
+                        </label>
+                        <p id="password-error"></p>
+                    </div>
+                    <div>
+                        <label>
+                            Your date of birth
+                            <input type="date" placeholder="Enter date">
+                        </label>
+                    </div>
+                    <div>
+                        <label id="email">
+                            Your email
+                            <input type="email" placeholder="Enter email">
+                        </label>
+                        <p id="email-error"></p>
+                    </div>
+                    <button type="submit">Enter</button>
+                </form>
+            </section>
+            </div>
+        </main>
+        <script src="script.js"></script>
+</body>
