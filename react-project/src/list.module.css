@@ -1,0 +1,63 @@
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.checkbox:checked {
+    background-color: hsl(40, 100%, 34%);
+}
+
+.checkbox::before {
+    display: none;
+    top: 4px;
+    left: 4px;
+    width: 14px;
+    height: 14px;
+}
+
+.checkbox:checked::before {
+    display: block;
+}
+.list{
+    align-items: center;
+    margin-left:36px;
+    font-size: 24px;
+    padding: 16px;
+    gap:16px;
+    line-height: 36px;
+}
+.list li {
+    padding: 16px;
+}
+.textBox {
+    margin: 16px;
+    width: 200px;
+    height: 24px;
+    background-color: hsl(51, 100%, 95%);
+    border:1px solid grey;
+    border-radius: 8px;
+}
+.form {
+    gap: 16px;
+    margin:16px;
+    padding: 16px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 24px;
+}
+.form button {
+    background-color:rgb(211, 172, 0);
+    width: 64px;
+    border:none;
+    border-radius: 8px;
+}
+.label {
+    font-size: 24px;
+    padding:16px;
+
+}
