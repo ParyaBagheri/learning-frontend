@@ -1,4 +1,4 @@
-const showcase = document.querySelector(".project-showcase");
+const showcase = document.querySelector(".projects");
 
 if (showcase) {
     const projects = [...document.querySelectorAll(".project")];

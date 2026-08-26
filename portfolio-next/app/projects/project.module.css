@@ -1,0 +1,102 @@
+.projects {
+    display: grid;
+    gap: 16px;
+    justify-content: normal;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    margin-inline: auto;
+    margin: 16px;
+    font-weight: lighter;
+    letter-spacing: 0.08rem;
+}
+
+.project {
+    padding: 16px;
+}
+
+.project img {
+    display: block;
+    width: 100%;
+    transition: transform 400ms ease;
+}
+
+.project:hover img {
+    transform: scale(1.05);
+}
+
+.projectsControls {
+    display: none;
+}
+
+.sliderViewport {
+    overflow: visible;
+    display: contents;
+}
+
+.sliderTrack {
+    display: contents;
+}
+
+@media (max-width: 768px) {
+    .projects {
+            display: block;
+            border: 1px solid var(--foreground);
+            border-radius: 1rem;
+    
+        }
+    
+        .project {
+            flex: 0 0 100%;
+            padding: 32px;
+        }
+    
+        .project img {
+            display: block;
+            margin-inline: auto;
+        }
+    
+        .project.active {
+            display: block;
+    
+        }
+    
+        .project.active img {
+            display: block;
+            margin-inline: auto;
+            max-width: 90vw;
+        }
+    
+        .projectsControls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+    
+        .sliderViewport {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+        }
+    
+        .sliderTrack {
+            display: flex;
+            transition: transform 400ms ease;
+        }
+    
+        .projectsControls button {
+            background-color: transparent;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #1a5d4d;
+    
+        }
+}
+.project a {
+    color:#1a5d4d;
+}
+.project a:visited {
+    color:#1a5d4d;
+    text-decoration: none;
+}

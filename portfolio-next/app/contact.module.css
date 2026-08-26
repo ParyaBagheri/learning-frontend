@@ -1,0 +1,48 @@
+.contact {
+    scroll-margin-top: 200px;
+    padding: 2rem;
+    border: 1.5px solid var(--foreground);
+    border-radius: 16px;
+    margin: 6px;
+}
+
+.contact h4 {
+    font-size: 1.5rem;
+}
+
+.contactForm {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 12px 16px;
+}
+
+.contactForm input {
+    max-width: 300px;
+    background-color: var(--input-background);
+    backdrop-filter: blur;
+    border: 1px solid var(--foreground);
+    border-radius: 8px;
+    font-size: 16px;
+    height: 28px;
+    padding: 10px;
+    color: var(--foreground);
+}
+
+.contactForm button {
+    background-color: var(--button-background);
+    border:none;
+    border-radius: 6px;
+    margin-top: 16px;
+    font-size: 24px;
+    color:var(--background);
+    transition: background-color 0.3s;
+    letter-spacing: 0.3rem;
+
+}
+.contactForm button:hover{
+    background-color: #5e805e;
+}
+.contactForm span{
+    color:cadetblue;
+}
