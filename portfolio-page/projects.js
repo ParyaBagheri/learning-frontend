@@ -1,3 +1,22 @@
+const dropdownButton = document.querySelector(".drop-down");
+const projectsCard = document.querySelector(".card .projects");
+const container = document.querySelector(".container");
+const cards = [...document.querySelectorAll(".card")];
+if(projectsCard){
+    const projectsList = projectsCard.querySelector(".projects-list");
+    if(dropdownButton){
+        dropdownButton.addEventListener("click", ()=>{
+            projectsList.classList.toggle("open");
+        })
+    }
+    cards.forEach(card => {
+        const tab = card.querySelector(".tab");
+        card.addEventListener("click", ()=>{
+            tab.classList.toggle("active");
+        })
+    })
+
+}
 const showcase = document.querySelector(".projects");
 
 if (showcase) {
@@ -53,22 +72,4 @@ if (showcase) {
         }
     )
 }
-const dropdownButton = document.querySelector(".drop-down");
-const projectsCard = document.querySelector(".container .projects");
-const container = document.querySelector(".container");
-const cards = [...document.querySelectorAll(".card")];
-if(projectsCard){
-    const projectsList = projectsCard.querySelector(".projects-list");
-    if(dropdownButton){
-        dropdownButton.addEventListener("click", ()=>{
-            projectsList.classList.toggle("open");
-        })
-    }
-    cards.forEach(card => {
-        const tab = card.querySelector(".tab");
-        card.addEventListener("click", ()=>{
-            tab.classList.toggle("active");
-        })
-    })
 
-}

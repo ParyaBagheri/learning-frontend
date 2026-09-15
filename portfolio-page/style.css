@@ -5,9 +5,7 @@ html{
     scroll-behavior: smooth;
     font-size:16px;
 }
-html:active-view-transition main {
-    animation: none;
-}
+
 body{
     margin:0;
     background-color: #cce8cc;
@@ -52,24 +50,27 @@ header {
     display: flex;
     flex-direction: row;
 }
-.home-page .projects{
-    color:black;
-    border:1.5px solid #1a5d4d;
-    border-radius: 1rem;
-    padding: 16px;
+.container .card {
     flex:1;
-    margin:6px;
-    transition : transform 250ms ease,
-                box-shadow 250ms ease; 
+    transition: transform 250ms ease,
+                box-shadow 250ms ease;
+    padding: 2rem;
+    border: 1.5px solid #1a5d4d;
+    border-radius: 1rem;
+    margin: 6px;
 }
-.home-page .projects:hover {
+.card:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgb(0 0 0 / 15%);
 }
-.home-page .projects h4{
+.card .projects{
+    color:black;
+}
+
+.card .projects h4{
     font-size:24px;
 }
-.home-page .projects div{
+.card .projects div{
     font-size: 18px;
 }
 .projects-list {
@@ -89,22 +90,12 @@ header {
     background-color:#cce8cc;
     color:black;
     left:305px;
-    padding: 2rem;
-    flex:1;
-    border:1.5px solid #1a5d4d;
-    border-radius: 1rem;
-    margin:6px;
     font-size:1rem;
-    transition : transform 250ms ease,
-                box-shadow 250ms ease;   
 }
 .workexp h4{
     font-size:1.5rem;
 }
-.workexp:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgb(0 0 0 / 15%);
-}
+
 .oswork {
     border-top:1px solid black;
     margin-top:2rem;
@@ -116,19 +107,7 @@ header {
     text-decoration: none;
     color: black;
 }
-.education {
-    padding:2rem;
-    border:1.5px solid #1a5d4d;
-    border-radius: 1rem;
-    margin:6px;
-    flex:1;
-    transition : transform 250ms ease,
-                box-shadow 250ms ease;   
-}
-.education:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgb(0 0 0 / 15%);
-}
+
 .education h4{
     font-size:1.5rem;
 }
@@ -150,7 +129,6 @@ header {
     justify-content: normal;
     grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     margin-inline:auto;
-    margin:16px;
 }
 .projects-page .project {
     padding: 16px;
